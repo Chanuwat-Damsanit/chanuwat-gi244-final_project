@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public InputAction dashAction;
 
+    public int maxplayerHp = 3;
     public int playerHp = 0;
 
 
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         gameOver = false;
 
-        playerHp = 3; 
+        playerHp = maxplayerHp; 
     }
 
     void Update()
@@ -74,7 +75,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
-            playerHp -= 1;
+            //playerHp -= 1;
+            TakeDamage(1);
 
             var explosion = Instantiate(explosionParticle, collision.transform.position, Quaternion.identity);
             explosion.Play();
@@ -93,5 +95,27 @@ public class PlayerController : MonoBehaviour
                 dirtParticle.Stop();
             }
         }
+        else if (collision.gameObject.CompareTag("HealthPotion"))
+        {
+            if (playerHp < maxplayerHp)
+            {
+                HealPlayer(1);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        playerHp -= damage;
+    }
+
+    void HealPlayer(int heal)
+    {
+        playerHp += heal;
     }
 }
