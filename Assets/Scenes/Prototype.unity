@@ -375,6 +375,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  maxplayerHp: 3
   playerHp: 3
 --- !u!65 &383521443
 BoxCollider:
