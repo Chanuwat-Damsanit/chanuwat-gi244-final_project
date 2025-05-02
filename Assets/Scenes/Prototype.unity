@@ -559,7 +559,12 @@ MonoBehaviour:
   - {fileID: 5842114324701935107, guid: a0f4f1964968e794793346c5e8a07472, type: 3}
   - {fileID: 134104, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
   - {fileID: 1574251093279545299, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
-  initialPoolSize: 3
+  - {fileID: 194656, guid: 8df4902223200544980b91d7f58b1079, type: 3}
+  - {fileID: 181666, guid: d8867924188463b48b6b078fe53cc76f, type: 3}
+  - {fileID: 145980, guid: 02c66a34fefc86645969cf6f54d540ba, type: 3}
+  - {fileID: 114304, guid: 29a644fc907f41242bf452eeb73f055d, type: 3}
+  - {fileID: 151096, guid: 69d6e98a16f64e446bcf770f6779973f, type: 3}
+  initialPoolSize: 5
 --- !u!4 &429046611
 Transform:
   m_ObjectHideFlags: 0
