@@ -28,6 +28,11 @@ public class MoveLeft : MonoBehaviour
             ObstacleObjectPool.GetInstance().Return(gameObject);
         }
 
+        if (transform.position.x < leftBound && gameObject.CompareTag("HealthPotion"))
+        {
+            PotionObjectPool.GetPotionInstance().PotionReturn(gameObject);
+        }
+
         if (playerController.gameOver == false && playerController.dashAction.IsPressed() && !hasDash) 
         {
             speed *= 2;
