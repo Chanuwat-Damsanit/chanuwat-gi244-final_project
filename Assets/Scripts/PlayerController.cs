@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public int maxplayerHp = 3;
     public int playerHp = 0;
 
+    public HealthBar healthBar;
+
 
     void Awake()
     {
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         gameOver = false;
 
         playerHp = maxplayerHp; 
+        healthBar.SetMaxHealth(maxplayerHp);
     }
 
     void Update()
@@ -112,10 +115,12 @@ public class PlayerController : MonoBehaviour
     void TakeDamage(int damage)
     {
         playerHp -= damage;
+        healthBar.SetHealth(playerHp);
     }
 
     void HealPlayer(int heal)
     {
         playerHp += heal;
+        healthBar.SetHealth(playerHp);
     }
 }
