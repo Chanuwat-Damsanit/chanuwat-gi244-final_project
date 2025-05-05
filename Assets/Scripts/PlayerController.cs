@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameManager gameManager;
+
 
     void Awake()
     {
