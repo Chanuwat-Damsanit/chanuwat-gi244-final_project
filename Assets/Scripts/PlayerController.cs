@@ -98,6 +98,8 @@ public class PlayerController : MonoBehaviour
                 playerAnim.SetBool("Death_b", true);
                 playerAnim.SetInteger("DeathType_int", 1);
                 dirtParticle.Stop();
+
+                gameManager.GameOver();
             }
         }
         else if (collision.gameObject.CompareTag("HealthPotion"))

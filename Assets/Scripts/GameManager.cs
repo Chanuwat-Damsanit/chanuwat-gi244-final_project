@@ -1,19 +1,44 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject gameOverScene;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    private void Awake()
+    {
+        gameOverScene.SetActive(false);
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (playerController.playerHp <= 0)
+        {
+            gameOverScene.SetActive(true);
+        }
+    }
+
+    public void GameOver()
+    {
+        gameOverScene.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        var s = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(s.name);
+    }
+
+    public void ReturntToMainMenu() 
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }
