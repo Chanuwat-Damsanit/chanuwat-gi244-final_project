@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip jumpSfx;
     public AudioClip crashSfx;
+    public AudioClip collectSfx;
 
     private Rigidbody rb;
     private InputAction jumpAction;
@@ -107,10 +108,12 @@ public class PlayerController : MonoBehaviour
             if (playerHp < maxplayerHp)
             {
                 HealPlayer(1);
+                playerAudio.PlayOneShot(collectSfx);
                 Destroy(collision.gameObject);
             }
             else
             {
+                playerAudio.PlayOneShot(collectSfx);
                 Destroy(collision.gameObject);
             }
         }
