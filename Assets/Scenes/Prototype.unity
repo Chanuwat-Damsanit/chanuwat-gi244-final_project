@@ -148,10 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce5f4a285df1a7428fae7273f9817ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab:
-  - {fileID: 5842114324701935107, guid: a0f4f1964968e794793346c5e8a07472, type: 3}
-  - {fileID: 134104, guid: 71782582b9d2cac4cba5251a3b767d13, type: 3}
-  - {fileID: 1574251093279545299, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
   spawnPos: {x: 25, y: 0, z: 0}
   potionSpawnPos: {x: 25, y: 5, z: 0}
   startDelay: 2
@@ -2203,10 +2199,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 236748366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: -0.000045776}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000061035156, y: -0.000045776367}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870656259
 MonoBehaviour:
