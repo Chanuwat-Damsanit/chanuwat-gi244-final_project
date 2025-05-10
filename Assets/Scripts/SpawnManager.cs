@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] obstaclePrefab;
+    //public GameObject[] obstaclePrefab;
     public Vector3 spawnPos = new(25, 0, 0);
     public Vector3 potionSpawnPos = new(25, 0, 0);
 
