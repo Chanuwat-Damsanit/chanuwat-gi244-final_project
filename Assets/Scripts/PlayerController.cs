@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Physics.gravity *= gravityModifier;
+        //Physics.gravity *= gravityModifier;
+        Physics.gravity = new Vector3(0, -9.81f * gravityModifier, 0);
 
         jumpAction = InputSystem.actions.FindAction("Jump");
         dashAction = InputSystem.actions.FindAction("Sprint"); 
